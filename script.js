@@ -422,3 +422,35 @@ previousSong.addEventListener("click",()=>{
 // START WITH FIRST SONG
 
 loadSong();
+
+
+// =============================
+// TIME TOGETHER COUNTER ❤️
+// =============================
+
+
+const startDate = new Date("2024-10-02");
+
+
+function updateCounter(){
+
+
+    const today = new Date();
+
+
+    const difference = today - startDate;
+
+
+    const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+    );
+
+
+    document.getElementById("daysTogether").innerHTML =
+    days + " Days ❤️";
+
+
+}
+
+
+updateCounter();
