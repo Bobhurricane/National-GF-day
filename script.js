@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
 
 });
 
-
+                    
 
 // =============================
 // ENTER BUTTON
@@ -230,72 +230,6 @@ closeLightbox.addEventListener("click",()=>{
 
 });
 
-// =============================
-// MUSIC PLAYER
-// =============================
-
-
-const songs = [
-
-"music/song1.mp3",
-
-"music/song2.mp3",
-
-"music/song3.mp3"
-
-];
-
-
-let currentSong = 0;
-
-
-const player = document.getElementById("musicPlayer");
-
-const source = document.getElementById("songSource");
-
-const songName = document.getElementById("songName");
-
-
-document.getElementById("playMusic").onclick = () => {
-
-player.play();
-
-};
-
-
-document.getElementById("pauseMusic").onclick = () => {
-
-player.pause();
-
-};
-
-
-
-document.getElementById("nextMusic").onclick = () => {
-
-
-currentSong++;
-
-
-if(currentSong >= songs.length){
-
-currentSong = 0;
-
-}
-
-
-source.src = songs[currentSong];
-
-player.load();
-
-player.play();
-
-
-songName.innerHTML =
-"Song " + (currentSong + 1) + " 🎀";
-
-
-};
 
 // =============================
 // CLASSIC IPOD MUSIC PLAYER
