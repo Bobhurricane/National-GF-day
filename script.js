@@ -296,3 +296,195 @@ songName.innerHTML =
 
 
 };
+
+// =============================
+// CLASSIC IPOD MUSIC PLAYER
+// =============================
+
+
+const songs = [
+
+    {
+        file: "song1.mp3",
+        name: "Hasta Donde Te Quiero ❤️",
+        cover: "cover1.jpg"
+    },
+
+    {
+        file: "song2.mp3",
+        name: "Todo Cambio - Edición Especial 🎀",
+        cover: "cover2.jpg"
+    },
+
+    {
+        file: "song3.mp3",
+        name: "No Voy a Jugar - Eslabon Armado 🌸",
+        cover: "cover3.jpg"
+    },
+
+    {
+        file: "song4.mp3",
+        name: "Lo Que Siento - Cuco ✨",
+        cover: "cover4.jpg"
+    },
+
+    {
+        file: "song5.mp3",
+        name: "Hey There Delilah - Plain White T's 💌",
+        cover: "cover5.jpg"
+    }
+
+];
+
+
+
+let currentSong = 0;
+
+let isPlaying = false;
+
+
+
+// IPOD ELEMENTS
+
+const ipodTab = document.getElementById("ipodTab");
+
+const ipod = document.getElementById("ipod");
+
+const albumCover = document.getElementById("albumCover");
+
+const songTitle = document.getElementById("songTitle");
+
+const playPause = document.getElementById("playPause");
+
+const nextSong = document.getElementById("nextSong");
+
+const previousSong = document.getElementById("previousSong");
+
+
+
+// AUDIO PLAYER
+
+const audio = new Audio();
+
+
+
+
+// OPEN / CLOSE IPOD
+
+ipodTab.addEventListener("click", () => {
+
+    ipod.classList.toggle("open");
+
+});
+
+
+
+
+// LOAD SONG
+
+function loadSong(){
+
+    audio.src = songs[currentSong].file;
+
+    albumCover.src = songs[currentSong].cover;
+
+    songTitle.innerHTML = songs[currentSong].name;
+
+}
+
+
+
+// PLAY / PAUSE
+
+playPause.addEventListener("click",()=>{
+
+
+    if(isPlaying){
+
+        audio.pause();
+
+        playPause.innerHTML = "▶️";
+
+        isPlaying = false;
+
+
+    } else {
+
+
+        audio.play();
+
+        playPause.innerHTML = "⏸️";
+
+        isPlaying = true;
+
+
+    }
+
+
+});
+
+
+
+
+// NEXT SONG
+
+nextSong.addEventListener("click",()=>{
+
+
+    currentSong++;
+
+
+    if(currentSong >= songs.length){
+
+        currentSong = 0;
+
+    }
+
+
+    loadSong();
+
+
+    audio.play();
+
+    isPlaying = true;
+
+    playPause.innerHTML = "⏸️";
+
+
+});
+
+
+
+
+// PREVIOUS SONG
+
+previousSong.addEventListener("click",()=>{
+
+
+    currentSong--;
+
+
+    if(currentSong < 0){
+
+        currentSong = songs.length - 1;
+
+    }
+
+
+    loadSong();
+
+
+    audio.play();
+
+    isPlaying = true;
+
+    playPause.innerHTML = "⏸️";
+
+
+});
+
+
+
+// START WITH FIRST SONG
+
+loadSong();
