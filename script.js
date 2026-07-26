@@ -194,7 +194,6 @@ function updateCounter(){
 }
 
 
-updateCounter();
 
 
 // =============================
