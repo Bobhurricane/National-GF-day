@@ -447,7 +447,7 @@ function updateCounter(){
 
 
     document.getElementById("daysTogether").innerHTML =
-    days + " Days ❤️";
+    days + " Days of memories ❤️";
 
 
 }
