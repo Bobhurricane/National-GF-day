@@ -477,14 +477,6 @@ closeSecret.addEventListener("click", () => {
 
 });
 
-#typingText {
-
-    color:#d46a92;
-
-    font-size:28px;
-
-    font-weight:bold;
-
-    min-height:40px;
+ 
 
 }
