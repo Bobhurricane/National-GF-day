@@ -440,29 +440,29 @@ secretButton.addEventListener("click", () => {
     typingText.innerHTML = "";
 
 
-    let message = "I have a crush on you ❤️";
+    let message = "I have a crush on you 👀❤️";
 
 
-    let i = 0;
+let i = 0;
 
 
-    let typing = setInterval(() => {
+let typing = setInterval(() => {
 
 
-        typingText.innerHTML += message[i];
+    typingText.innerHTML += message.charAt(i);
 
 
-        i++;
+    i++;
 
 
-        if(i >= message.length){
+    if(i >= message.length){
 
-            clearInterval(typing);
+        clearInterval(typing);
 
-        }
+    }
 
 
-    },100);
+},150);
 
 
 });
