@@ -429,6 +429,7 @@ const closeSecret = document.getElementById("closeSecret");
 
 const typingText = document.getElementById("typingText");
 
+console.log(typingText);
 
 
 secretButton.addEventListener("click", () => {
