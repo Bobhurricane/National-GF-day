@@ -414,3 +414,22 @@ function updateCounter(){
 
 
 updateCounter();
+
+// =============================
+// SECRET MESSAGE 💌
+// =============================
+
+
+const secretButton = document.getElementById("secretButton");
+
+const secretMessage = document.getElementById("secretMessage");
+
+
+
+secretButton.addEventListener("click", () => {
+
+
+    secretMessage.style.display = "block";
+
+
+});
