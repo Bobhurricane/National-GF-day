@@ -416,67 +416,42 @@ function updateCounter(){
 updateCounter();
 
 // =============================
-// SECRET MESSAGE 💌
+// SECRET REVEAL 💌
 // =============================
 
-
-
 const secretButton = document.getElementById("secretButton");
-
 const secretOverlay = document.getElementById("secretOverlay");
-
 const closeSecret = document.getElementById("closeSecret");
-
 const typingText = document.getElementById("typingText");
-
-console.log(typingText);
 
 
 secretButton.addEventListener("click", () => {
 
-
     secretOverlay.style.display = "flex";
-
 
     typingText.innerHTML = "";
 
-
     let message = "I have a crush on you 👀❤️";
 
+    let i = 0;
 
-let i = 0;
+    let typing = setInterval(() => {
 
+        typingText.innerHTML += message.charAt(i);
 
-let typing = setInterval(() => {
+        i++;
 
+        if (i >= message.length) {
+            clearInterval(typing);
+        }
 
-    typingText.innerHTML += message.charAt(i);
+    },150);
 
-
-    i++;
-
-
-    if(i >= message.length){
-
-        clearInterval(typing);
-
-    }
-
-
-},150);
-    
 });
-
 
 
 closeSecret.addEventListener("click", () => {
 
-
     secretOverlay.style.display = "none";
 
-
 });
-
- 
-
-}
