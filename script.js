@@ -420,16 +420,59 @@ updateCounter();
 // =============================
 
 
+
 const secretButton = document.getElementById("secretButton");
 
-const secretMessage = document.getElementById("secretMessage");
+const secretOverlay = document.getElementById("secretOverlay");
+
+const closeSecret = document.getElementById("closeSecret");
+
+const typingText = document.getElementById("typingText");
 
 
 
 secretButton.addEventListener("click", () => {
 
 
-    secretMessage.style.display = "block";
+    secretOverlay.style.display = "flex";
+
+
+    typingText.innerHTML = "";
+
+
+    let message = "I have a crush on you ❤️";
+
+
+    let i = 0;
+
+
+    let typing = setInterval(() => {
+
+
+        typingText.innerHTML += message[i];
+
+
+        i++;
+
+
+        if(i >= message.length){
+
+            clearInterval(typing);
+
+        }
+
+
+    },100);
+
+
+});
+
+
+
+closeSecret.addEventListener("click", () => {
+
+
+    secretOverlay.style.display = "none";
 
 
 });
