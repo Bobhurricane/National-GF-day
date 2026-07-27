@@ -157,45 +157,6 @@ function lovePopup(){
 
 setInterval(lovePopup,15000);
 
-
-
-// =============================
-// RELATIONSHIP COUNTER
-// =============================
-
-
-const anniversary =
-new Date("October 2, 2024");
-
-
-
-function updateCounter(){
-
-
-    const today = new Date();
-
-
-    const difference =
-    today - anniversary;
-
-
-    const days =
-    Math.floor(
-        difference /
-        (1000*60*60*24)
-    );
-
-
-    console.log(
-        "Together for " + days + " days ❤️"
-    );
-
-
-}
-
-
-
-
 // =============================
 // PHOTO SPOTLIGHT
 // =============================
