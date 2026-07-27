@@ -1187,3 +1187,44 @@ h1 {
 
 
 }
+
+/* SECRET MESSAGE */
+
+#secretMessage {
+
+    display:none;
+
+    margin-top:20px;
+
+    padding:20px;
+
+    background:#ffe6f2;
+
+    border-radius:20px;
+
+    animation:secretPop .5s ease;
+
+}
+
+
+
+@keyframes secretPop {
+
+    from {
+
+        transform:scale(.5);
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
