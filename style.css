@@ -1228,3 +1228,96 @@ h1 {
     }
 
 }
+
+
+/* SECRET OVERLAY */
+
+#secretOverlay {
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+
+
+#secretMessage {
+
+
+    background:#ffeaf4;
+
+    padding:35px;
+
+    width:80%;
+
+    max-width:400px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 0 40px pink;
+
+    animation:secretPop .5s ease;
+
+}
+
+
+
+.eyes {
+
+    font-size:50px;
+
+    margin:20px;
+
+}
+
+
+
+#closeSecret {
+
+    border:none;
+
+    background:#f8a8c8;
+
+    padding:10px 20px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+}
+
+
+
+@keyframes secretPop {
+
+    from {
+
+        transform:scale(.5);
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
